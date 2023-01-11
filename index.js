@@ -1,5 +1,15 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for (const number of array){
+
+    for (j=0; j<(array.length-1); j++){
+      array.splice(array[j],1);
+      array.push(array[j]);  
+      if (number+array[j]===target){
+          return true;
+        }
+  }
+}
+return false;
 }
 
 /* 
